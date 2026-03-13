@@ -25,7 +25,15 @@ const Hero = ({
                 />
                 <Wrapper className="absolute inset-0 bg-black/40 flex justify-center items-center flex-col gap-2 md:gap-3 lg:gap-4 text-center">
                     <HeroHeading className="uppercase">
-                        Servis se zaměřením na Japonské vozy
+                        Servis se
+                        <span className="text-[#fb0404]">
+                            zaměřením
+                        </span>
+                        na
+                        <span className="text-[#fb0404]">
+                            Japonské
+                        </span>
+                        vozy
                     </HeroHeading>
                     <Text>
                         Přijeďte nás poctít Vaší návštěvou! Sídlíme na adrese Nebovidy 155, 280 02 Nebovidy.

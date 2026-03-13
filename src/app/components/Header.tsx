@@ -18,7 +18,7 @@ const Header = ({
         <Fragment>
             <Wrapper className={clsx(className, "p-4 bg-[#282828] text-white flex justify-between items-center gap-4 md:gap-6 lg:gap-8")}>
                 <Logo />
-                <List className="hidden md:flex justify-center items-center gap-8 md:gap-10 lg:gap-16 text-base md:text-[17px] lg:text-[17.5px]">
+                <List className="hidden lg:flex justify-center items-center gap-8 md:gap-10 lg:gap-16 text-base md:text-[17px] lg:text-[17.5px]">
                     {
                         [
                             {
