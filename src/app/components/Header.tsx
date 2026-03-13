@@ -51,7 +51,7 @@ const Header = ({
                 </List>
                 <HeaderLink
                 href="#kontakt"
-                className="p-4 md:p-6 min-w-[180px] md:min-w-[200px] text-center rounded-full cursor-pointer bg-[#fb0404] text-base md:text-[17px] lg:text-[17.5px]">
+                className="hidden md:inline-block p-4 md:p-6 max-w-[180px] md:max-w-[200px] text-center rounded-full cursor-pointer bg-[#fb0404] text-base md:text-[17px] lg:text-[17.5px]">
                     Kde nás najdete
                 </HeaderLink>
             </Wrapper>

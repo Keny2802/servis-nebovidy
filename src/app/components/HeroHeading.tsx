@@ -13,7 +13,7 @@ const HeroHeading = ({
 }) => {
     return (
         <Fragment>
-            <h1 className={clsx(className, "text-5xl md:text-6xl lg:text-8xl font-black hero-heading-component")}>
+            <h1 className={clsx(className, "text-5xl md:text-6xl lg:text-7xl font-black max-w-4xl hero-heading-component")}>
                 {children}
             </h1>
         </Fragment>
