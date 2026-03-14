@@ -5,7 +5,6 @@ import clsx from "clsx";
 
 import Wrapper from "../components/Wrapper";
 import Img from "../components/Img";
-import HeroHeading from "../components/HeroHeading";
 import Text from "../components/Text";
 import HeaderLink from "../components/HeaderLink";
 
@@ -24,7 +23,9 @@ const Hero = ({
                 className="aspect-square object-cover"
                 />
                 <Wrapper className="absolute inset-0 bg-black/40 flex justify-center items-center flex-col gap-2 md:gap-3 lg:gap-4 text-center">
-                    <HeroHeading className="uppercase">
+                    <Text
+                    type="heroHeading"
+                    className="uppercase">
                         Servis se
                         {" "}
                         <span className="text-[#fb0404]">
@@ -38,8 +39,8 @@ const Hero = ({
                         </span>
                         {" "}
                         vozy
-                    </HeroHeading>
-                    <Text>
+                    </Text>
+                    <Text type="bodyText">
                         Přijeďte nás poctít Vaší návštěvou! Sídlíme na adrese Nebovidy 155, 280 02 Nebovidy.
                     </Text>
                     <Wrapper className="mt-2 md:mt-3 lg:mt-4 flex justify-center items-center flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
