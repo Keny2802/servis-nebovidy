@@ -8,7 +8,7 @@ import {
 import clsx from "clsx";
 
 interface props {
-    type: "heroHeading" | "sectionHeading" | "bodyText";
+    type: "heroHeading" | "cardHeading" | "sectionHeading" | "boldText" | "bodyText";
     className?: string;
     children: ReactNode;
 };
@@ -16,7 +16,9 @@ interface props {
 const Text = ({ type="bodyText", className, children } : props) => {
   const textVariants = {
       heroHeading: "text-5xl md:text-6xl lg:text-7xl font-black max-w-4xl hero-heading-component",
-      sectionHeading: "text-3xl md:text-4xl font-semibold max-w-4xl section-heading-component",
+      sectionHeading: "text-3xl md:text-4xl font-extrabold section-heading-component",
+      cardHeading: "text-2xl md:text-3xl font-bold card-heading-component",
+      boldText: "text-xl font-semibold",
       bodyText: "text-base md:text-[16.5px] lg:text-[16.75px] md:max-w-3xl body-text-component"
   };
 
@@ -33,26 +35,22 @@ const Text = ({ type="bodyText", className, children } : props) => {
                     {children}
                 </h2>
             )
+            || textVariants["cardHeading"] && (
+                <h3 className={clsx(className, `${textVariants[type]}`)}>
+                    {children}
+                </h3>
+            )
+            || textVariants["boldText"] && (
+                <p className={clsx(className, `${textVariants[type]}`)}>
+                    {children}
+                </p>
+            )
             || textVariants["bodyText"] && (
                 <p className={clsx(className, `${textVariants[type]}`)}>
                     {children}
                 </p>
-              )
-        }
-        {/* {
-            textVariants["sectionHeading"] && (
-              <h2 className={clsx(className, `${textVariants[type]}`)}>
-                  {children}
-              </h2>
             )
         }
-        {
-            textVariants["bodyText"] && (
-              <p className={clsx(className, `${textVariants[type]}`)}>
-                  {children}
-              </p>
-            )
-        } */}
     </Fragment>
   );
 };

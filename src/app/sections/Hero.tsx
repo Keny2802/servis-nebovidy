@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Wrapper from "../components/Wrapper";
 import Img from "../components/Img";
 import Text from "../components/Text";
-import HeaderLink from "../components/HeaderLink";
+import Cta from "../components/Cta";
 
 const Hero = ({
     className
@@ -15,17 +15,18 @@ const Hero = ({
 }) => {
     return (
         <Fragment>
-            <Wrapper className={clsx(className, "relative min-h-screen p-4 md:p-6 lg:p-8 bg-[#cdcdcd] text-white")}>
+            <Wrapper className={clsx(className, "relative min-h-screen bg-[#cdcdcd] text-white")}>
                 <Img
                 fill={true}
+                priority={true}
                 src="/hero.avif"
                 alt="Servis nebovidy úvodní foto - servis se zaměřením na Japonské vozy"
-                className="aspect-square object-cover"
+                className="md:p-4 md:rounded-[100px] aspect-square object-cover"
                 />
-                <Wrapper className="absolute inset-0 bg-black/40 flex justify-center items-center flex-col gap-2 md:gap-3 lg:gap-4 text-center">
+                <Wrapper className="absolute inset-0 p-2 md:p-2.5 lg:p-4 bg-black/40 flex justify-center items-center flex-col gap-2 md:gap-3 lg:gap-4 text-center">
                     <Text
                     type="heroHeading"
-                    className="uppercase">
+                    className="uppercase max-w-[400px] md:max-w-[700px] lg:max-w-[900px]">
                         Servis se
                         {" "}
                         <span className="text-[#fb0404]">
@@ -56,12 +57,13 @@ const Hero = ({
                                 }
                             ].map((link, idx) => {
                                 return (
-                                    <HeaderLink
+                                    <Cta
                                     key={idx}
-                                    href={link.href}
-                                    className="p-4 md:p-6 min-w-[180px] md:min-w-[200px] text-center rounded-full cursor-pointer first:bg-[#ffffff] last:bg-[#fb0404] first:text-black text-base md:text-[17px] lg:text-[17.5px]">
+                                    type={idx === 0 ? "secondary" : "primary"}
+                                    size="lg"
+                                    href={link.href}>
                                         {link.text}
-                                    </HeaderLink>
+                                    </Cta>
                                 );
                             })
                         }

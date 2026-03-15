@@ -13,6 +13,7 @@ type ImgType = {
     height?: number;
     src: string;
     alt?: string;
+    priority?: boolean;
     className?: string;
 } & fillType;
 
@@ -27,6 +28,19 @@ const Img = (props: ImgType) => {
                     width: props.width,
                     height: props.height,
                 })
+            }
+            {
+                ...(
+                    props.priority ? (
+                        {
+                            priority: true
+                        }
+                    ) : (
+                        {
+                            priority: false
+                        }
+                    )
+                )
             }
             src={props.src}
             alt={props.alt || "Foto Servis Nebovidy - Tomáš Pazourek"}
