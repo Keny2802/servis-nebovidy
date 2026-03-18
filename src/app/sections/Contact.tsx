@@ -151,7 +151,7 @@ const Contact = () => {
                                             [
                                                 { text: "Tomáš Pazourek" },
                                                 { text: "Japanese Cars" },
-                                                { text: "Nebovidy 247, okres Brno-venkov, 664 48." }
+                                                { text: "247, Nebovidy 247, 664 48 Nebovidy." }
                                             ].map((info, idx) => {
                                                 return (
                                                     <Text

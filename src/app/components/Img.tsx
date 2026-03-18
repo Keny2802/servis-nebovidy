@@ -13,7 +13,8 @@ type ImgType = {
     height?: number;
     src: string;
     alt?: string;
-    priority?: boolean;
+    type?: "standard" | "hero",
+    draggable?: boolean;
     className?: string;
 } & fillType;
 
@@ -31,7 +32,7 @@ const Img = (props: ImgType) => {
             }
             {
                 ...(
-                    props.priority ? (
+                    props.type === "hero" ? (
                         {
                             priority: true
                         }
@@ -44,6 +45,7 @@ const Img = (props: ImgType) => {
             }
             src={props.src}
             alt={props.alt || "Foto Servis Nebovidy - Tomáš Pazourek"}
+            draggable={props.draggable}
             className={clsx(props.className, "img-component")}
             />
         </Fragment>

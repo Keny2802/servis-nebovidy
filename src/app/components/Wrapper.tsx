@@ -6,14 +6,18 @@ import clsx from "clsx";
 
 const Wrapper = ({
     className,
+    onClick,
     children
 } : {
     className?: string;
+    onClick?: () => void;
     children?: ReactNode
 }) => {
     return (
         <Fragment>
-            <div className={clsx(className, "wrapper-component")}>
+            <div
+            onClick={onClick}
+            className={clsx(className, "wrapper-component")}>
                 {children}
             </div>
         </Fragment>

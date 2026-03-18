@@ -2,13 +2,10 @@ import {
   ReactNode,
   Fragment
 } from "react";
-import {
-    cva
-} from "class-variance-authority";
 import clsx from "clsx";
 
 interface props {
-    type: "heroHeading" | "cardHeading" | "sectionHeading" | "boldText" | "bodyText";
+    type?: "heroHeading" | "cardHeading" | "sectionHeading" | "boldText" | "bodyText";
     className?: string;
     children: ReactNode;
 };

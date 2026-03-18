@@ -49,7 +49,7 @@ const Pricing = () => {
                                 },
                                 {
                                     href: "/cenik/chladici-kapalina-g11",
-                                    src: "/brake-and-clutch-fluid-replacement.avif",
+                                    src: "/coolant-fluid-replacement-1.avif",
                                     alt: "Chladící kapalina G11 - Servis Nebovidy Tomáš Pazourek",
                                     heading: "Chladící kapalina G11",
                                     subheading: "Pro více informací u technika.",
@@ -58,7 +58,7 @@ const Pricing = () => {
                                 },
                                 {
                                     href: "/cenik/chladici-kapalina-g12",
-                                    src: "/brake-and-clutch-fluid-replacement.avif",
+                                    src: "/coolant-fluid-replacement-2.avif",
                                     alt: "Chladící kapalina G12 - Servis Nebovidy Tomáš Pazourek",
                                     heading: "Chladící kapalina G12",
                                     subheading: "Pro více informací u technika.",
@@ -77,37 +77,37 @@ const Pricing = () => {
                             ].map((card, idx) => {
                                 return (
                                     <Fragment key={idx}>
-                                        <Wrapper
-                                        className="relative cursor-pointer">
-                                            <Img
-                                            width={500}
-                                            height={500}
-                                            src={card.src}
-                                            alt={card.alt}
-                                            className="max-h-[350px] md:max-w-[500px] md:max-h-[500px] rounded-md object-cover"
-                                            />
-                                            <Wrapper className="absolute inset-0 bg-black/60 w-full h-full rounded-md" />
-                                            <Link
-                                            href={card.href}
-                                            target="_blank">
-                                                <Wrapper className="absolute bottom-5 left-5 flex flex-col items-start gap-1.5">
-                                                    <Text
-                                                    type="cardHeading"
-                                                    className="text-start">
-                                                        {card.heading}
-                                                    </Text>
-                                                    <Text type="bodyText">
-                                                        {card.subheading}
-                                                    </Text>
-                                                    <Text type="boldText">
-                                                        {card.price}
-                                                    </Text>
-                                                    <Text type="bodyText">
-                                                        {card.vatText}
-                                                    </Text>
-                                                </Wrapper>
-                                            </Link>
-                                        </Wrapper>
+                                        <Link
+                                        href={card.href}
+                                        target="_blank">
+                                            <Wrapper
+                                            className="relative cursor-pointer">
+                                                <Img
+                                                width={500}
+                                                height={500}
+                                                src={card.src}
+                                                alt={card.alt}
+                                                className="max-h-[350px] md:max-w-[500px] md:min-h-[490px] md:max-h-[500px] rounded-md object-cover"
+                                                />
+                                                <Wrapper className="absolute inset-0 bg-black/30 w-full h-full rounded-md" />
+                                                    <Wrapper className="absolute bottom-5 left-5 flex flex-col items-start gap-1.5">
+                                                        <Text
+                                                        type="cardHeading"
+                                                        className="text-start">
+                                                            {card.heading}
+                                                        </Text>
+                                                        <Text type="bodyText">
+                                                            {card.subheading}
+                                                        </Text>
+                                                        <Text type="boldText">
+                                                            {card.price}
+                                                        </Text>
+                                                        <Text type="bodyText">
+                                                            {card.vatText}
+                                                        </Text>
+                                                    </Wrapper>
+                                            </Wrapper>
+                                        </Link>
                                     </Fragment>
                                 );
                             })
